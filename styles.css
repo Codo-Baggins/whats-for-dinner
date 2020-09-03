@@ -8,3 +8,58 @@ red - #ee5253
 
 */
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+section {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    height: 600px;
+    width: 100%;
+}
+
+img {
+    position: absolute; 
+    width: 100%;
+    height: 100%; 
+    z-index: -1;
+}
+
+h1 {
+    display: flex;
+    background-color: #0fb9b1;
+    height: 100px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif; 
+    padding: 10px;
+}
+.menu-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 375px;
+    width: 450px;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(225, 225, 225, .9);
+    justify-content: center;
+}
+
+.head-question {
+    font-family: 'Roboto', sans-serif;
+}
+#cookpot {
+    height: 150px;
+    width: 150px;
+    z-index: 1;
+}
+
+button {
+    background-color: #0fb9b1;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
