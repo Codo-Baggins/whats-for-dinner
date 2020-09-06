@@ -5,12 +5,23 @@
   </head>
   <body>
     <h1>
-      <content>What's for Dinner</content><button>ADD A BUTTON</button>
+      <content>What's for Dinner</content><button id="header-button">ADD A RECIPE</button>
     </h1>
     <img src="assets/burger-friends.jpg" alt="Friends at table eating burgers">
     <section>
       <div class="menu-box">
-        <div class="head-question">What are you looking for?*</div> <button>LETS COOK!</button>
+        <div class="head-question">What are you looking for?</div><div id="asterisk">*</div>
+          <form>
+            <input type="radio" id="side" name="food-option">
+            <label for="side">Side</label><br/>
+            <input type="radio" id="main-dish" name="food-option">
+            <label for="main-dish">Main Dish</label><br/>
+            <input type="radio" id="dessert" name="food-option">
+            <label for="dessert">Dessert</label><br/>
+            <input type="radio" id="entire-meal" name="food-option">
+            <label for="entire-meal">Entire Meal</label><br/>
+          </form>
+        <button>LETS COOK!</button>
       </div>
       <div class="menu-box">
         <img src="assets/cookpot.svg" alt="Cookpot" id="cookpot">

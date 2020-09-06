@@ -8,7 +8,7 @@ red - #ee5253
 
 */
 
-body {
+* {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -32,15 +32,23 @@ img {
 
 h1 {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #0fb9b1;
     height: 100px;
     width: 100%;
     font-family: 'Roboto', sans-serif; 
     padding: 10px;
 }
+
+#asterisk {
+    color: red;
+}
 .menu-box {
     display: flex;
-    align-items: center;
+    padding: 40px;
+    line-height: 35px;
+    align-items: left;
     flex-direction: column;
     height: 375px;
     width: 450px;
@@ -49,8 +57,15 @@ h1 {
     justify-content: center;
 }
 
+.menu-box:nth-child(2) {
+    align-items: center;
+}
+
 .head-question {
     font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+
 }
 #cookpot {
     height: 150px;
@@ -59,7 +74,20 @@ h1 {
 }
 
 button {
+    display: flex;
+    align-items: center;
     background-color: #0fb9b1;
     border: none;
-    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    height: 40px;
+    width: 150px;
+    justify-content: center; 
+
+}
+
+#header-button {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
 }
