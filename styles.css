@@ -91,3 +91,17 @@ button {
     flex-direction: column;
     align-content: flex-end;
 }
+
+.food-suggestion {
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.food-item {
+    font-size: 40px;   
+}
+
+.hidden {
+    display: none;
+}

@@ -10,7 +10,7 @@
     <img src="assets/burger-friends.jpg" alt="Friends at table eating burgers">
     <section>
       <div class="menu-box">
-        <div class="head-question">What are you looking for?</div><div id="asterisk">*</div>
+        <div class="head-question">What are you looking for?<span id="asterisk">*</span></div>
           <form>
             <input type="radio" id="side" name="food-option">
             <label for="side">Side</label><br/>
@@ -21,12 +21,15 @@
             <input type="radio" id="entire-meal" name="food-option">
             <label for="entire-meal">Entire Meal</label><br/>
           </form>
-        <button>LETS COOK!</button>
+        <button type="submit" id="lets-cook-button">LETS COOK!</button>
       </div>
       <div class="menu-box">
         <img src="assets/cookpot.svg" alt="Cookpot" id="cookpot">
+        <div class="food-suggestion hidden">You should make:</div>
+        <h2 class="food-item hidden"></h2>
       </div>
     </section>
   </body>
+  <script type="text/javascript" src="data.js"></script>
   <script type="text/javascript" src="main.js"></script>
 </html>
