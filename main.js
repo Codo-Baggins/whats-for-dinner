@@ -9,19 +9,27 @@ var sideHtmlElement = document.querySelector("#side");
 var mainDishHtmlElement = document.querySelector("#main-dish");
 var dessertHtmlElement = document.querySelector("#dessert");
 
+var foodFormHtmlElement = document.querySelector("form");
+
 
 //event listeners
 
-sideHtmlElement.addEventListener("click", allowLetsCookButtonToBeClicked);
-mainDishHtmlElement.addEventListener("click", allowLetsCookButtonToBeClicked);
-dessertHtmlElement.addEventListener("click", allowLetsCookButtonToBeClicked);
+// sideHtmlElement.addEventListener("click", allowLetsCookButtonToBeClicked);
+// mainDishHtmlElement.addEventListener("click", allowLetsCookButtonToBeClicked);
+// dessertHtmlElement.addEventListener("click", allowLetsCookButtonToBeClicked);
 
-var currentSelection = getElementById(id)
+foodFormHtmlElement.addEventListener("submit", allowLetsCookButtonToBeClicked)
 
 //event handlers
 
-function allowLetsCookButtonToBeClicked(foodArray) {
-    letsCookButtonHtmlElement.addEventListener("click", displayRandomFoodItem (foodArray));
+function allowLetsCookButtonToBeClicked() {
+    if (sideHtmlElement.checked === true) {
+        displayRandomFoodItem(sides);
+    } else if (mainDishHtmlElement.checked === true) {
+        displayRandomFoodItem(mains)
+     } else if (dessertHtmlElement.checked === true) {
+        displayRandomFoodItem(desserts)
+    }
 }
 
 function getRandomIndex(foodArray) {
@@ -34,7 +42,12 @@ function displayRandomFoodItem(foodArray) {
 
     foodSuggestionHtmlElement.classList.remove("hidden");
     foodItemHtmlElement.classList.remove("hidden");
-    foodItemHtmlElement.innerText = `${randomFoodItem}`;
     cookpotHtmlElement.classList.add("hidden");
-}
 
+    var myFoodData = new FormData(foodFormHtmlElement) 
+    var output = "";
+        for (var entry of myFoodData) {
+            output = randomFoodItem;
+        }
+        foodItemHtmlElement.innerText = output;
+}
